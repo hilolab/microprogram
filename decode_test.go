@@ -13,10 +13,10 @@ var encryptedData string = "CiyLU1Aw2KjvrjMdj8YKliAjtP4gsMZMQmRzooG2xrDcvSnxIMXF
 
 func TestDecode(t *testing.T) {
 	d := NewDecoder(APP_ID)
-	data, err := d.Decode(sessionKey, iv, encryptedData)
+	js, err := d.Decode(sessionKey, iv, encryptedData)
 	if err != nil {
 		log.Fatalln(err)
 	}
 
-	log.Printf("%s\n", data)
+	log.Println(js)
 }
